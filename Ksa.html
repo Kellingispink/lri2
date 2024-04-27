@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sound Player</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #222;
+            background-image: url('background.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-family: 'Press Start 2P', cursive;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
+            text-align: center;
+        }
+
+        h1 {
+            color: #ffcc00;
+            text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .sound-buttons {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 20px;
+            margin-top: 20px;
+        }
+
+        .sound-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background-color: #ff3300;
+            color: #fff;
+            font-size: 1.2rem;
+            border: 2px solid #ffcc00;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+            transform-style: preserve-3d;
+        }
+
+        .sound-button:hover {
+            background-color: #ff6600;
+            transform: perspective(1000px) rotateX(15deg) rotateY(15deg) scale(1.1);
+        }
+
+        .sound-button img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .add-sound-section {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+            border: 1px solid #ffcc00;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            font-family: 'Press Start 2P', cursive;
+        }
+
+        input[type="password"]:focus,
+        input[type="text"]:focus {
+            outline: none;
+        }
+
+        #add-custom-sound-button {
+            padding: 10px 20px;
+            margin-top: 10px;
+            background-color: #ff3300;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        #add-custom-sound-button:hover {
+            background-color: #ff6600;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Sound Player</h1>
+        <div class="sound-buttons">
+            <!-- Sound buttons here -->
+        </div>
+
+        <div class="add-sound-section">
+            <h2>Add Custom Sound</h2>
+            <input type="password" id="password" placeholder="Enter password">
+            <input type="text" id="custom-sound-url" placeholder="Enter sound URL">
+            <button id="add-custom-sound-button">Add Sound</button>
+        </div>
+    </div>
+    <!-- Scripts -->
+</body>
+</html>
